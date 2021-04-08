@@ -1,0 +1,67 @@
+//main styles
+.main-wrapper
+	padding 0 0 0 0
+	min-width $min-width
+	width 100%
+	position relative
+	overflow hidden
+	min-height 100%
+	display flex
+	flex-direction column
+	justify-content flex-start	
+
+.wrapper
+	min-width $min-width
+	max-width $max-width
+	padding 0 40px 0 40px
+	margin 0 auto
+	position relative
+
+/* titles */
+p
+	font($base-font-size, $base-line-height, $text-color, $custom-font-family, 400)
+	padding 15px 0 15px 0
+
+h1
+	font($font-size-h1, $line-height-h1, $title-color, $custom-font-family, 700)
+	padding 15px 0 15px 0
+
+h2
+	font($font-size-h2, $line-height-h2, $title-color, $custom-font-family, 700)
+	padding 15px 0 15px 0
+
+h3
+	font($font-size-h3, $line-height-h3, $title-color, $custom-font-family, 700)
+	padding 15px 0 15px 0
+
+/* styles */
+.main
+	min-width $min-width
+	width 100%
+	order 2
+	flex-grow 1
+
+
+/*==========  Desktop First  ==========*/
+@media (max-width : 1440px)
+	.wrapper 
+		max-width 1140px
+/* Large Devices, Wide Screens */
+@media (max-width : 1200px)
+	.wrapper 
+		max-width 960px
+/* Medium Devices, Desktops */
+@media (max-width : 991px)
+	.wrapper 
+		max-width 720px
+/* Small Devices, Tablets */
+@media (max-width : 767px)
+	.wrapper 
+		max-width 540px
+/* Small Devices, Tablets */
+// @media (max-width : 576px)
+/* Small Devices, Tablets */
+// @media (max-width : 480px)
+/* Custom, iPhone Retina */
+// @media (max-width : 380px)
+
