@@ -20,19 +20,25 @@
 /* titles */
 p
 	font($base-font-size, $base-line-height, $text-color, $custom-font-family, 400)
-	padding 15px 0 15px 0
+	padding 0 0 15px 0
+	&:last-of-type
+		padding-bottom 0
 
 h1
 	font($font-size-h1, $line-height-h1, $title-color, $custom-font-family, 700)
-	padding 15px 0 15px 0
+	padding 0
 
 h2
 	font($font-size-h2, $line-height-h2, $title-color, $custom-font-family, 700)
-	padding 15px 0 15px 0
+	padding 0
 
 h3
 	font($font-size-h3, $line-height-h3, $title-color, $custom-font-family, 700)
-	padding 15px 0 15px 0
+	padding 0
+
+h4
+	font($font-size-h4, $line-height-h4, $title-color, $custom-font-family, 700)
+	padding 0
 
 /* styles */
 .main
@@ -41,11 +47,120 @@ h3
 	order 2
 	flex-grow 1
 
+.cookies
+	position fixed
+	width 260px
+	z-index 9999
+	top 0
+	left 50%
+	padding 70px 30px 30px 35px
+	color $white
+	font-weight 500
+	background $black url('../img/main/cookies-bg.svg') center right no-repeat
+	will-change transform, box-shadow
+	&__title
+		margin-bottom 10px
+		font-size 25px
+		line-height 35px
+		font-weight 700
+	&__text
+		margin-bottom 30px
+	&__btn
+		color $accent
+		font-size 20px
+		line-height 40px
+		text-transform uppercase
+
+.section
+	background-color $white
+
+.title
+	span
+		&.yellow
+			background-color $accent
+
+.ill
+	position absolute
+	&-el
+		position absolute
+		width 100%
+		will-change transform, opacity
+
+
+/* Customize the label (the checkbox-wrap) */
+.checkbox-wrap 
+	display: block
+	position: relative
+	padding-left: 35px
+	margin-bottom: 12px
+	cursor: pointer
+	font-size: 22px
+	-webkit-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+
+
+	/* Hide the browser's default radio button */
+.checkbox-wrap input 
+	position: absolute
+	opacity: 0
+	cursor: pointer
+	height: 0
+	width: 0
+
+
+	/* Create a custom radio button */
+.checkmark 
+	position: absolute
+	top: 0
+	left: 0
+	height: 25px
+	width: 25px
+	background-color: #eee
+
+
+	/* On mouse-over, add a grey background color */
+.checkbox-wrap:hover input ~ .checkmark 
+	background-color: #ccc
+
+
+	/* When the radio button is checked, add a blue background */
+.checkbox-wrap input:checked ~ .checkmark 
+	background-color: #2196F3
+
+
+	/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after 
+	content: ""
+	position: absolute
+	display: none
+
+
+	/* Show the indicator (dot/circle) when checked */
+.checkbox-wrap input:checked ~ .checkmark:after 
+	display: block
+
+
+	/* Style the indicator (dot/circle) */
+.checkbox-wrap .checkmark:after 
+	left: 9px
+	top: 5px
+	width: 5px
+	height: 10px
+	border: solid white
+	border-width: 0 3px 3px 0
+	-webkit-transform: rotate(45deg)
+	-ms-transform: rotate(45deg)
+	transform: rotate(45deg)
+
+.box-field
+	margin-bottom 24px
+	&:last-child
+		margin-bottom 0
 
 /*==========  Desktop First  ==========*/
-@media (max-width : 1440px)
-	.wrapper 
-		max-width 1140px
+// @media (max-width : 1440px)
 /* Large Devices, Wide Screens */
 @media (max-width : 1200px)
 	.wrapper 

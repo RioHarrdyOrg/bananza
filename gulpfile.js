@@ -89,7 +89,7 @@ const libsCss = (cb) => {
 
 const mainCssDev = (cb) => {
 	return gulp
-		.src("app/stylus/*")
+		.src("app/stylus/*.styl")
 		.pipe(plumber())
 		.pipe(sourcemaps.init())
 		.pipe(
@@ -153,6 +153,18 @@ const copyVideo = (cb) => {
 	cb();
 };
 
+const copyLibs = (cb) => {
+	return gulp
+		.src("app/libs/**/*.*")
+		.pipe(gulp.dest("build/libs/"))
+		.pipe(
+			browserSync.reload({
+				stream: true,
+			})
+		);
+	cb();
+};
+
 const copyFonts = (cb) => {
 	return gulp
 		.src("app/fonts/**/*.*")
@@ -168,11 +180,12 @@ const copyFonts = (cb) => {
 const watcher = () => {
 	watch("app/img/**/*.*", gulp.series(copyImg, cacheClear));
 	watch("app/video/**/*.*", gulp.series(copyVideo, cacheClear));
+	watch("app/video/**/*.*", gulp.series(copyLibs, cacheClear));
 	watch("app/fonts/**/*.*", gulp.series(copyFonts, cacheClear));
 	watch("app/libs/**/*.*", gulp.series(libsCss, libsJs, cacheClear));
 	watch("app/js/**/*.*", gulp.series(mainJs, cacheClear));
 	watch("app/stylus/**/*.*", gulp.series(mainCssDev, cacheClear));
-	watch("app/parts/*.html", gulp.series(htmlDev, cacheClear));
+	watch("app/parts/**/*.html", gulp.series(htmlDev, cacheClear));
 	watch("app/*.html", gulp.series(htmlDev, cacheClear));
 };
 
@@ -181,6 +194,7 @@ exports.default = gulp.series(
 		copyImg,
 		copySupport,
 		copyVideo,
+		copyLibs,
 		copyFonts,
 		libsCss,
 		libsJs,

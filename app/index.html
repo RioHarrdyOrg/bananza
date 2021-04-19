@@ -6,22 +6,46 @@
 		//= parts/meta.html
 		<!-- css -->
 		<link rel="stylesheet" href="css/libs.min.css" />
+		<link rel="stylesheet" href="libs/pagepiling/jquery.pagepiling.min.css" />
 		<link rel="stylesheet" href="css/common.css" />
 		<link rel="stylesheet" href="css/index.css" />
 	</head>
 	<body class="body loading">
 		//= parts/loader.html
 
-		<div class="main-wrapper">
-			<!-- Header -->
-			//= parts/header.html
+		<main class="main" id="pagepiling">
 			<!-- Main -->
-			//= parts/main.html
-			<!-- Footer -->
-			//= parts/footer.html
+			//= parts/site/main.html
+			<!-- About us -->
+			//= parts/site/about-us.html
+			<!-- Why us -->
+			//= parts/site/why-us.html
+			<!-- Services -->
+			//= parts/site/services.html
+			<!-- Call back -->
+			//= parts/site/call-back.html
+			<!-- Portfolio -->
+			//= parts/site/portfolio.html
+			<!-- Contacts -->
+			//= parts/site/contacts.html
+		</main>
+
+		<!-- Header -->
+		//= parts/header.html
+		<!-- Footer -->
+		//= parts/footer.html
+
+		<!-- Cookies -->
+		<div class="cookies">
+			<div class="cookies__title">Cookies</div>
+			<div class="cookies__text">
+				By using this website, you automatically accept that we use cookies.
+			</div>
+			<a href="#" class="cookies__btn">Okey</a>
 		</div>
 
 		<script src="js/libs.min.js"></script>
+		<script src="libs/pagepiling/jquery.pagepiling.min.js"></script>
 		<script src="js/common.js"></script>
 		<script src="js/index.js"></script>
 	</body>
