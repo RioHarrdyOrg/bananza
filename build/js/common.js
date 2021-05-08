@@ -7300,7 +7300,7 @@
           function tlMainFinish(obj) {
             let tl = gsapWithCSS.timeline(obj);
             tl.to(".ill_main .ill-el", {
-              top: "55%",
+              top: "65%",
               left: "45%",
               scale: 0,
               opacity: 0,
