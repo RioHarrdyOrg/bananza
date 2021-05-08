@@ -240,7 +240,7 @@ const compressImg = (cb) => {
 				sameDest: true,
 			})
 		)
-		.pipe(gulp.dest("build/img/main/"));
+		.pipe(gulp.dest("build/img/"));
 	cb();
 };
 
