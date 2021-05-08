@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="63px" viewBox="0 0 80 63" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>banan</title>
+    <defs>
+        <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#EBB600" offset="0%"></stop>
+            <stop stop-color="#FFC600" offset="6.90708135%"></stop>
+            <stop stop-color="#FFC600" offset="28.6107769%"></stop>
+            <stop stop-color="#FFC600" offset="66.1087872%"></stop>
+            <stop stop-color="#FFC600" offset="68.0696703%"></stop>
+            <stop stop-color="#FFC600" offset="92.9710743%"></stop>
+            <stop stop-color="#EBB600" offset="100%"></stop>
+        </linearGradient>
+        <path d="M40,0 C54.2630047,0 66.782433,4.59852505 73.8642366,11.5200414 L80,11.52 L80,24.96 C79.7181318,38.4210858 61.9176985,49.28 40,49.28 C17.90861,49.28 0,38.2482962 0,24.64 L0.004,24.96 L0,24.96 L0,11.52 L6.13576341,11.5200414 C13.217567,4.59852505 25.7369953,0 40,0 Z" id="path-2"></path>
+        <linearGradient x1="100%" y1="58.5985496%" x2="0%" y2="58.5985496%" id="linearGradient-4">
+            <stop stop-color="#FFC600" offset="0%"></stop>
+            <stop stop-color="#FFD442" offset="11.2388899%"></stop>
+            <stop stop-color="#FFC500" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="58.5985496%" x2="0%" y2="58.5985496%" id="linearGradient-5">
+            <stop stop-color="#FFC600" offset="0%"></stop>
+            <stop stop-color="#FFD442" offset="29.3353596%"></stop>
+            <stop stop-color="#FFC500" offset="100%"></stop>
+        </linearGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="50%" gradientTransform="translate(0.500000,0.500000),scale(0.616000,1.000000),rotate(90.000000),scale(1.000000,1.609975),translate(-0.500000,-0.500000)" id="radialGradient-6">
+            <stop stop-color="#FFD55F" offset="0%"></stop>
+            <stop stop-color="#FFE06C" offset="100%"></stop>
+        </radialGradient>
+        <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="linearGradient-7">
+            <stop stop-color="#FECD37" offset="1.69635052%"></stop>
+            <stop stop-color="#FFD34C" offset="7.5229458%"></stop>
+            <stop stop-color="#FFD34C" offset="91.7859484%"></stop>
+            <stop stop-color="#F4C42F" offset="100%"></stop>
+        </linearGradient>
+        <radialGradient cx="44.0832028%" cy="47.5739962%" fx="44.0832028%" fy="47.5739962%" r="84.9225098%" gradientTransform="translate(0.440832,0.475740),scale(0.598683,1.000000),scale(1.000000,0.510713),translate(-0.440832,-0.475740)" id="radialGradient-8">
+            <stop stop-color="#E3B300" stop-opacity="0.2" offset="0%"></stop>
+            <stop stop-color="#C37C00" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="English" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="09-bananza-v3" transform="translate(-934.000000, -43.000000)">
+            <g id="banan" transform="translate(934.000000, 43.000000)">
+                <g id="Rectangle" transform="translate(0.000000, 12.800000)">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <use id="Mask" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                    <rect fill="url(#linearGradient-4)" mask="url(#mask-3)" x="10.88" y="30.72" width="16" height="18.56"></rect>
+                    <rect id="Rectangle-Copy" fill="url(#linearGradient-5)" mask="url(#mask-3)" x="55.04" y="29.44" width="8.32" height="18.56"></rect>
+                </g>
+                <ellipse id="Oval-Copy" stroke="url(#linearGradient-7)" stroke-width="3.84" fill="url(#radialGradient-6)" cx="40" cy="24.64" rx="38.08" ry="22.72"></ellipse>
+                <path d="M63.36,8.32 L40.32,19.84 L41.6,3.84 C35.182679,3.96685361 29.2093457,4.82018694 23.68,6.4 C18.1506543,7.97981306 13.6706543,10.1131464 10.24,12.8 L34.56,23.68 L7.04,32.64 C10.88,37.76 15.5733333,41.1733333 21.12,42.88 C26.6666667,44.5866667 33.0666667,45.2266667 40.32,44.8 L41.6,28.8 L67.2,37.76 C73.6,33.92 76.3733333,29.0133333 75.52,23.04 C74.6666667,17.0666667 70.6133333,12.16 63.36,8.32 Z" id="Path-2-Copy-3" fill="url(#radialGradient-8)"></path>
+                <polygon id="Path-2" fill-opacity="0.1" fill="#C37C00" points="51.4625626 15.7626657 45.0625626 23.4426657 53.3825626 28.5626657 50.1825626 22.8026657"></polygon>
+                <ellipse id="Oval" fill="#FFC425" cx="43.84" cy="31.36" rx="1" ry="1"></ellipse>
+                <ellipse id="Oval-Copy-2" fill="#FFC425" cx="26.56" cy="23.68" rx="1" ry="1"></ellipse>
+                <ellipse id="Oval-Copy-3" fill="#FFC425" cx="43.2" cy="16" rx="1" ry="1"></ellipse>
+                <polygon id="Path-2-Copy" fill-opacity="0.1" fill="#C37C00" transform="translate(35.142563, 31.122666) rotate(-225.000000) translate(-35.142563, -31.122666) " points="37.3825626 24.7226657 30.9825626 32.4026657 39.3025626 37.5226657 36.1025626 31.7626657"></polygon>
+                <polygon id="Path-2-Copy-2" fill-opacity="0.1" fill="#C37C00" transform="translate(33.862563, 17.042666) rotate(-120.000000) translate(-33.862563, -17.042666) " points="36.1025626 10.6426657 29.7025626 18.3226657 38.0225626 23.4426657 34.8225626 17.6826657"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

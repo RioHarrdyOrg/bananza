@@ -1,0 +1,161 @@
+@import 'supports/_vars.styl';
+.section
+	&_work
+		padding 55px 0 150px
+	&_call-work
+		padding-bottom 150px
+		.inner
+			display none
+			margin-bottom 30px
+.work
+	&-back
+		position absolute
+		right calc(100% - 9px)
+		top 14px
+		display flex
+		align-items center
+		transform rotate(-90deg)
+		color rgba($black2, .5)
+		&:hover
+			color rgba($black2, 1)
+		span 
+			font-size 20px
+			line-height 40px
+			&[class^='icon-']
+				margin-left 15px
+				font-size 15px
+				transform rotate(-90deg)
+	&-row
+		display flex
+		&_reverse
+			flex-direction row-reverse
+			.work-info
+				padding-right 0
+				padding-left 143px	
+		&.center
+			align-items center
+		&.start
+			align-items flex-start
+			&_padding
+				.work-info
+					padding-top 70px
+		&.mb
+			&_150
+				margin-bottom 150px
+	&-info
+		width 50%
+		padding-right 143px
+		h4:not(.work-title)
+			font-weight 400
+	&-pic
+		width 50%
+		background-repeat no-repeat
+		background-position center
+		background-size cover
+	&-data
+		color $accent
+	&-hashtag
+		color $black2
+	&-desc
+		margin-bottom 45px
+	&-title
+		margin-bottom 45px
+		font-weight 700
+		span 
+			padding 0 10px
+			display inline-block
+			background-color $accent
+	&-list
+		padding 0
+		margin 0
+		list-style-type disc
+		li
+			margin-bottom 45px
+			&:last-child
+				margin-bottom 0
+			span 
+				font-weight 700
+@media (max-width: 1440px)
+	.work-back
+		position static
+		margin-bottom 20px
+		transform none
+		display inline-flex
+		flex-direction row-reverse
+	.work-back span[class^='icon-']
+		transform: rotate(-180deg)
+		margin-left 0
+		margin-right 15px
+@media (max-width: 991px)
+	.work-info
+		padding-right 40px
+	.work-row_reverse .work-info
+		padding-left 40px
+
+@media (max-width: 767px)
+	.work-desc
+		display flex
+		flex-direction row
+		flex-wrap wrap
+	.work-name
+		order -1
+		width 100%
+		margin-bottom 10px
+	.work-data
+		order 2
+		width 50%
+		text-align right
+	.work-hashtag
+		order 1
+		width 50%
+		padding-right 10px
+	.section_work
+		padding 130px 0 30px
+	.section_call-work
+		padding 30px 0
+	.section_call-work .inner
+		display block
+	.section_call-work
+		.form_call .box-field
+			position relative
+		.form_call .box-field__label
+			position absolute
+			bottom 4px
+			padding-right 0
+		.form_call .box-field__label,
+		.form .form-control
+			font-size 20px
+			line-height 35px
+		.form .form-control
+			padding 4px 0
+		.form textarea
+			min-height 45px
+	.work-row
+		display block
+		margin-bottom 60px
+		&:last-child 
+			margin-bottom 0
+	.work-info
+		width auto
+		margin-bottom 30px
+		padding-right 0
+	.work-info h4:not(.work-title)
+		font-size 15px
+		line-height 25px
+	.work-desc
+		margin-bottom 30px
+	.work-pic
+		width auto
+		margin 0 -30px
+	.work-row.mb_150
+		margin-bottom 60px
+	.work-title
+		margin-bottom 20px
+	.work-row_reverse .work-info
+		padding-left 0
+	.work-list li
+		margin-bottom 20px
+	.work-row.start_padding .work-info
+		padding-top 0
+
+		

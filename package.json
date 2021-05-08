@@ -40,6 +40,7 @@
     "jquery": "^3.6.0",
     "pageable": "^0.6.8",
     "pagepiling.js": "^1.5.6",
+    "slick-carousel": "^1.8.1",
     "swiper": "^6.5.6"
   }
 }
