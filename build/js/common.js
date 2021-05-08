@@ -7080,8 +7080,6 @@
 
 
     optimizedResize.add(function () {
-      console.log(window.innerHeight);
-
       if (window.innerWidth <= 767 || window.innerHeight <= 699) {
         if ($(".slick").length && !$(".slick").hasClass("slick-initialized")) {
           $(".slick").slick("refresh");
@@ -7143,8 +7141,6 @@
             animateAnchor: false,
             //events
             onLeave: function (index, nextIndex, direction) {
-              console.log("leave");
-              console.log(index, nextIndex, direction);
               changeLine(".menu li:nth-child(" + nextIndex + ")"); // 1 => 8
 
               if (nextIndex === 8 && direction == "down") {
@@ -7218,10 +7214,8 @@
                 tlContacts.restart();
               }
             },
-            afterLoad: function (anchorLink, index) {// console.log("load");
-            },
+            afterLoad: function (anchorLink, index) {},
             afterRender: function () {
-              console.log("render");
               changeLine(".menu li.active");
             }
           }); // GSAP ANIMATION
@@ -7508,10 +7502,8 @@
     }
 
     function showCont(id) {
-      console.log(id);
       portfolioPhotos.forEach(el => {
         const contId = el.dataset.cont;
-        console.log(contId);
 
         if (contId === id) {
           el.classList.add("active");
@@ -7634,7 +7626,6 @@
     const callControls = document.querySelectorAll(".form_call .form-control");
 
     if (window.innerWidth <= 767 || window.innerHeight <= 699) {
-      console.log("aaa");
       callControls.forEach(el => {
         el.addEventListener("input", hideLabel);
         el.addEventListener("blur", hideLabel);
