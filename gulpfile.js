@@ -230,7 +230,7 @@ const mainCssBuild = (cb) => {
 
 const compressImg = (cb) => {
 	return gulp
-		.src("build/img/main/**/*.{png,jpg}")
+		.src("build/img/**/*.{png,jpg}")
 		.pipe(plumber())
 		.pipe(
 			tinypng({
@@ -250,9 +250,9 @@ const removeModules = (cb) => {
 };
 
 exports.production = gulp.series(
-	mainJsBuild,
-	mainCssBuild,
-	compressImg,
-	removeModules
+	// mainJsBuild,
+	// mainCssBuild,
+	compressImg
+	// removeModules
 );
 /* End Production */
