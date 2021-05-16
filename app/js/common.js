@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 	// gsapSet
 	if (cookies) {
-		if (window.innerWidth > 767 && window.innerHeight > 699) {
+		if (window.innerWidth > 767 && window.innerHeight > 599) {
 			gsap.set(cookies, { x: "-50%", y: "-100%", boxShadow: "none" });
 		} else {
 			gsap.set(cookies, { x: "-50%", y: "100%", boxShadow: "none" });
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		cookiesBtn.addEventListener("click", (e) => {
 			e.preventDefault();
 
-			if (window.innerWidth > 767 && window.innerHeight > 699) {
+			if (window.innerWidth > 767 && window.innerHeight > 599) {
 				gsap.to(cookies, {
 					x: "-50%",
 					y: "-100%",
@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	// start process
 	optimizedResize.add(function () {
-		if (window.innerWidth <= 767 || window.innerHeight <= 699) {
+		if (window.innerWidth <= 767 || window.innerHeight <= 599) {
 			if ($(".slick").length && !$(".slick").hasClass("slick-initialized")) {
 				$(".slick").slick("refresh");
 			}
@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	if ($("#pagepiling").length) {
 		ScrollTrigger.matchMedia({
 			// desktop
-			"(min-width: 768px) and (min-height: 700px)": function () {
+			"(min-width: 768px) and (min-height: 600px)": function () {
 				// Pagepiling
 				$("#pagepiling").pagepiling({
 					menu: "#myMenu",
@@ -533,7 +533,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			],
 		});
 	}
-	if (window.innerWidth <= 767 || window.innerHeight <= 699) {
+	if (window.innerWidth <= 767 || window.innerHeight <= 599) {
 		if ($(".slick").length && !$(".slick").hasClass("slick-initialized")) {
 			$(".slick").slick("refresh");
 		}
@@ -606,7 +606,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 	// Section call input absolute
 	const callControls = document.querySelectorAll(".form_call .form-control");
-	if (window.innerWidth <= 767 || window.innerHeight <= 699) {
+	if (window.innerWidth <= 767 || window.innerHeight <= 599) {
 		callControls.forEach((el) => {
 			el.addEventListener("input", hideLabel);
 			el.addEventListener("blur", hideLabel);

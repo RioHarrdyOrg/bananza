@@ -6990,7 +6990,7 @@
 
 
     if (cookies) {
-      if (window.innerWidth > 767 && window.innerHeight > 699) {
+      if (window.innerWidth > 767 && window.innerHeight > 599) {
         gsapWithCSS.set(cookies, {
           x: "-50%",
           y: "-100%",
@@ -7016,7 +7016,7 @@
       cookiesBtn.addEventListener("click", e => {
         e.preventDefault();
 
-        if (window.innerWidth > 767 && window.innerHeight > 699) {
+        if (window.innerWidth > 767 && window.innerHeight > 599) {
           gsapWithCSS.to(cookies, {
             x: "-50%",
             y: "-100%",
@@ -7080,7 +7080,7 @@
 
 
     optimizedResize.add(function () {
-      if (window.innerWidth <= 767 || window.innerHeight <= 699) {
+      if (window.innerWidth <= 767 || window.innerHeight <= 599) {
         if ($(".slick").length && !$(".slick").hasClass("slick-initialized")) {
           $(".slick").slick("refresh");
         }
@@ -7120,7 +7120,7 @@
     if ($("#pagepiling").length) {
       ScrollTrigger.matchMedia({
         // desktop
-        "(min-width: 768px) and (min-height: 700px)": function () {
+        "(min-width: 768px) and (min-height: 600px)": function () {
           // Pagepiling
           $("#pagepiling").pagepiling({
             menu: "#myMenu",
@@ -7540,7 +7540,7 @@
       });
     }
 
-    if (window.innerWidth <= 767 || window.innerHeight <= 699) {
+    if (window.innerWidth <= 767 || window.innerHeight <= 599) {
       if ($(".slick").length && !$(".slick").hasClass("slick-initialized")) {
         $(".slick").slick("refresh");
       }
@@ -7625,7 +7625,7 @@
 
     const callControls = document.querySelectorAll(".form_call .form-control");
 
-    if (window.innerWidth <= 767 || window.innerHeight <= 699) {
+    if (window.innerWidth <= 767 || window.innerHeight <= 599) {
       callControls.forEach(el => {
         el.addEventListener("input", hideLabel);
         el.addEventListener("blur", hideLabel);
