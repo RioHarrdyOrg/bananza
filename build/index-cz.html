@@ -108,7 +108,7 @@
 					<img src="img/main/loader-text.svg" alt="loader" />
 				</div>
 				<div class="loader-inner">
-					<div class="loader-text">Feel the rush</div>
+					<div class="loader-text">Cítit spěch</div>
 					<div class="loader-percent"></div>
 				</div>
 			</div>
@@ -153,9 +153,7 @@
 							</div>
 						</div>
 						<div class="main-right">
-							<h2 class="title">
-								We gonna make it <span class="yellow">tasty</span>
-							</h2>
+							<h2 class="title">Zvládneme <span class="yellow">to</span></h2>
 							<p>Zaměřeny na gastronomii a potravinářský průmysl.</p>
 						</div>
 					</div>
@@ -207,12 +205,10 @@
 					</div>
 					<div class="mobile-start">
 						<h3 class="title">
-							Don't wait <br />
-							and order <span class="yellow">free</span> consultaion!
+							Nečekejte <br />
+							a objednejte <span class="yellow">si bezplatnou</span> konzultaci!
 						</h3>
-						<p>
-							You don’t have to be great to start, but you have to start to be great.
-						</p>
+						<p>Nemusíte být skvělí, abyste začali, ale musíte začít být skvělí.</p>
 						<div class="ill ill-mobile ill-mobile_start">
 							<div class="ill-el ill-el_4">
 								<img src="img/contacts/ill-4.png" alt="contacts" />
@@ -223,8 +219,8 @@
 									<div class="inner">
 										<div class="contacts-btn-title">start</div>
 										<div class="contacts-btn-text">
-											order free <br />
-											consultation
+											objednat konzultaci <br />
+											zdarma
 										</div>
 									</div>
 								</a>
@@ -248,7 +244,7 @@
 						</div>
 					</div>
 					<div class="inner">
-						<h3>Why always us?</h3>
+						<h3>Proč vždy my?</h3>
 						<div class="why-wrap slick">
 							<div class="why-block">
 								<div class="why-top">
@@ -324,7 +320,7 @@
 			<section class="section section_services pp-scrollable">
 				<div class="wrapper">
 					<div class="inner">
-						<h2>Services</h2>
+						<h2>Služby</h2>
 					</div>
 					<div class="services-wrap">
 						<div class="serv-row">
@@ -534,7 +530,7 @@
 			<section class="section section_call">
 				<div class="wrapper">
 					<div class="inner">
-						<h2>Call me back</h2>
+						<h2>Zavolejte mi zpět</h2>
 					</div>
 					<div class="form form_call">
 						<form>
@@ -549,7 +545,7 @@
 									>Moje telefonní číslo je</label
 								>
 								<div class="box-field__input">
-									<input type="text" class="form-control" id="phone" />
+									<input type="number" class="form-control" id="phone" />
 								</div>
 							</div>
 							<div class="box-field">
@@ -573,7 +569,12 @@
 							</div>
 							<div class="box-field">
 								<div class="box-field__input">
-									<button class="btn btn_button btn_accent" type="submit">
+									<button
+										class="btn btn_button btn_accent js-popup-next"
+										data-target="thanks"
+										disabled
+										type="submit"
+									>
 										Poslat
 									</button>
 								</div>
@@ -1074,7 +1075,7 @@
 		<header class="header">
 			<div class="wrapper">
 				<div class="header-wrap">
-					<a href="#" class="logo">
+					<a href="#" class="logo js-logo">
 						<img src="img/main/logo.png" alt="logo" loading="lazy" />
 					</a>
 					<div class="header-right">
@@ -1113,7 +1114,7 @@
 						<a href="#services">Služby</a>
 					</li>
 					<li data-menuanchor="special">
-						<a href="#special">Zavolejte mi</a>
+						<a href="#special">special pack</a>
 					</li>
 					<li data-menuanchor="callBack">
 						<a href="#callBack">call back</a>
@@ -1124,7 +1125,7 @@
 					<li data-menuanchor="contacts">
 						<a href="#contacts">Kontakty</a>
 					</li>
-					<div class="menu-decor">selected</div>
+					<div class="menu-decor">vybraný</div>
 				</menu>
 			</div>
 		</footer>
@@ -1183,7 +1184,7 @@
 							>
 							<div class="box-field__input">
 								<input
-									type="text"
+									type="number"
 									class="form-control"
 									placeholder="+420 000 000 000"
 								/>
@@ -1199,7 +1200,7 @@
 						<div class="box-field">
 							<div class="box-field__input">
 								<button
-									class="btn btn_button btn_white js-popup-start"
+									class="btn btn_button btn_white js-popup-next"
 									type="submit"
 									data-target="thanks"
 								>
@@ -1245,7 +1246,7 @@
 		</div>
 
 		<script src="js/libs.min.js"></script>
-		<script src="libs/pagepiling/jquery.pagepiling.min.js"></script>
+		<script src="libs/pagepiling/jquery.pagepiling.js"></script>
 		<script src="libs/slick/slick.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>

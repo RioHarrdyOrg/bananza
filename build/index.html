@@ -168,24 +168,24 @@
 						<img src="img/aboutUs/ill-mob.png" alt="logo" loading="lazy" />
 					</div>
 					<div class="about-wrap">
-						<div class="about-left">
-							<div class="ill ill_about">
-								<div class="ill-el ill-el_1">
-									<img src="img/aboutUs/ill-1.svg" alt="hamburger" />
-								</div>
-								<div class="ill-el ill-el_2">
-									<img src="img/aboutUs/ill-2.svg" alt="hamburger" />
-								</div>
-								<div class="ill-el ill-el_3">
-									<img src="img/aboutUs/ill-3.svg" alt="hamburger" />
-								</div>
-								<div class="ill-el ill-el_4">
-									<img src="img/aboutUs/ill-4.svg" alt="hamburger" />
-								</div>
-								<div class="ill-el ill-el_5">
-									<img src="img/aboutUs/ill-5.svg" alt="hamburger" />
-								</div>
+						<div class="ill ill_about">
+							<div class="ill-el ill-el_1">
+								<img src="img/aboutUs/ill-1.svg" alt="hamburger" />
 							</div>
+							<div class="ill-el ill-el_2">
+								<img src="img/aboutUs/ill-2.svg" alt="hamburger" />
+							</div>
+							<div class="ill-el ill-el_3">
+								<img src="img/aboutUs/ill-3.svg" alt="hamburger" />
+							</div>
+							<div class="ill-el ill-el_4">
+								<img src="img/aboutUs/ill-4.svg" alt="hamburger" />
+							</div>
+							<div class="ill-el ill-el_5">
+								<img src="img/aboutUs/ill-5.svg" alt="hamburger" />
+							</div>
+						</div>
+						<div class="about-left">
 							<h3 class="title">
 								We are Marketing Agency focused on
 								<span class="yellow"> Food Industry & Restaurant Business. </span>
@@ -541,7 +541,7 @@
 									>My phone number</label
 								>
 								<div class="box-field__input">
-									<input type="text" class="form-control" id="phone" />
+									<input type="number" class="form-control" id="phone" />
 								</div>
 							</div>
 							<div class="box-field">
@@ -565,7 +565,12 @@
 							</div>
 							<div class="box-field">
 								<div class="box-field__input">
-									<button class="btn btn_button btn_accent" type="submit">
+									<button
+										class="btn btn_button btn_accent js-popup-next"
+										data-target="thanks"
+										disabled
+										type="submit"
+									>
 										Send
 									</button>
 								</div>
@@ -1064,7 +1069,7 @@
 		<header class="header">
 			<div class="wrapper">
 				<div class="header-wrap">
-					<a href="#" class="logo">
+					<a href="#" class="logo js-logo">
 						<img src="img/main/logo.png" alt="logo" loading="lazy" />
 					</a>
 					<div class="header-right">
@@ -1171,7 +1176,7 @@
 							<label for="" class="box-field__label">My phone number</label>
 							<div class="box-field__input">
 								<input
-									type="text"
+									type="number"
 									class="form-control"
 									placeholder="+420 000 000 000"
 								/>
@@ -1187,7 +1192,7 @@
 						<div class="box-field">
 							<div class="box-field__input">
 								<button
-									class="btn btn_button btn_white js-popup-start"
+									class="btn btn_button btn_white js-popup-next"
 									type="submit"
 									data-target="thanks"
 								>
@@ -1233,7 +1238,7 @@
 		</div>
 
 		<script src="js/libs.min.js"></script>
-		<script src="libs/pagepiling/jquery.pagepiling.min.js"></script>
+		<script src="libs/pagepiling/jquery.pagepiling.js"></script>
 		<script src="libs/slick/slick.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>

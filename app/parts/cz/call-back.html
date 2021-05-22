@@ -1,7 +1,7 @@
 <section class="section section_call">
 	<div class="wrapper">
 		<div class="inner">
-			<h2>Call me back</h2>
+			<h2>Zavolejte mi zpět</h2>
 		</div>
 		<div class="form form_call">
 			<form>
@@ -16,7 +16,7 @@
 						>Moje telefonní číslo je</label
 					>
 					<div class="box-field__input">
-						<input type="text" class="form-control" id="phone" />
+						<input type="number" class="form-control" id="phone" />
 					</div>
 				</div>
 				<div class="box-field">
@@ -40,7 +40,12 @@
 				</div>
 				<div class="box-field">
 					<div class="box-field__input">
-						<button class="btn btn_button btn_accent" type="submit">
+						<button
+							class="btn btn_button btn_accent js-popup-next"
+							data-target="thanks"
+							disabled
+							type="submit"
+						>
 							Poslat
 						</button>
 					</div>

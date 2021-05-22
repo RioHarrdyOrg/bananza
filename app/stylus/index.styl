@@ -5,6 +5,8 @@
 			position static
 	&_about
 		padding 215px 0
+		&::-webkit-scrollbar 
+			width: 0
 		&:before, &:after
 			content ''
 			position fixed
@@ -27,6 +29,8 @@
 				margin-bottom 30px
 	&_services
 		padding 150px 0 210px
+		&::-webkit-scrollbar 
+			width: 0
 		&:before, &:after
 			content ''
 			position fixed
@@ -53,6 +57,8 @@
 			position static
 	&_portfolio
 		padding 150px 0
+		&::-webkit-scrollbar 
+			width: 0
 		&:before, &:after
 			content ''
 			position fixed
@@ -186,6 +192,7 @@
 		position relative
 		background-repeat no-repeat
 		background-size 130% 130%
+		height 288px
 		overflow hidden
 	&-info
 		overflow hidden
@@ -203,6 +210,9 @@
 		white-space nowrap
 		top 46px
 		left calc(100% - 90px)
+		&.ghost
+			@supports(-webkit-text-stroke: 1px black)
+				-webkit-text-stroke-color rgba($title-color, .4)
 	&-show
 		display none
 		text-align center
@@ -243,9 +253,29 @@
 		text-transform uppercase
 		font-weight 500
 		border 8px solid $white
+		color $black2
+		transition-delay .5s
+		&:hover
+			color $white
+			transition-delay 0s
+			&:after
+				transform translate(-50%, -50%) scale(1)
+				mix-blend-mode multiply
+		&:after
+			content ''
+			position absolute
+			top 50%
+			left 50%
+			width 100%
+			height 100%
+			transform translate(-50%, -50%) scale(0)
+			background-color $red
+			transition transform 1s ease
+			border-radius 50%
 		&:before
 			content ''
 			position absolute
+			z-index 1
 			top 50%
 			left 50%
 			transform translate(-50%, -50%)
@@ -253,6 +283,9 @@
 			height 85%
 			background url(../img/main/main-svg-2.png) center no-repeat
 			background-size contain
+		span
+			position relative
+			z-index 1
 
 .portfolio
 	&-wrap
@@ -268,7 +301,7 @@
 			margin 0
 			padding 0
 	&__item
-		margin-bottom 40px
+		padding-bottom 40px
 		max-width 480px
 		&.active
 			.portfolio-name
@@ -407,6 +440,7 @@
 			margin-bottom 5px
 			font-size 30px
 			line-height 45px
+			color $black
 			&:last-child
 				margin-bottom 0
 	&-right
@@ -523,12 +557,11 @@
 						transform rotate(30deg)
 						opacity 0
 	&_about
+		position fixed
+		pointer-events none
 		width 286px
 		height 690px
-		bottom 210px
-		left 152%
-		bottom -2vh
-		transform translateX(-50%)
+		transform translate(150%, -40%)
 		.ill-el
 			&_1
 				max-width 100%
@@ -668,22 +701,38 @@
 	.about-right
 		max-width: 280px
 	.ill_about
-		left 50vw
+		transform translate(35vw, -40%)
 	.why-block
 		max-width: 380px
 	.ill_contacts
 		left 35%
-	.serv-pic
-		background-size 150% 120%
+		width 450px
+	.ill_contacts .ill-el_4
+		top 40px
+		right -40px
+	.ill_contacts .ill-el_5
+		right 8%
+	.ill_contacts .ill-el_2
+		top 85%
+	.ill_why
+		width 180px
+		height 440px
 @media (max-width : 1100px)
 	.why-block
 		max-width: 360px
-
+@media (min-width 992px) and (max-height : 750px)
+	.ill_contacts
+		bottom 50px
+		width 457px
+	.ill_contacts .ill-el_4
+		top 40px
+	.why-block p
+		font-size 13px
 @media (min-width 992px) and (max-height : 700px)
 	.section_about
 		padding 155px 0
 	.ill_about
-		bottom -6vh
+		bottom -26vh
 	.about-right p
 		font-size 25px
 		line-height 40px
@@ -712,11 +761,11 @@
 		margin-bottom 25px
 	.ill_contacts
 		bottom 0
+		height 590px
 	.contacts-left h2
 		margin-bottom 15px
 	.contacts__item
 		margin-bottom 10px
-
 @media (max-width : 991px)
 	.main-title 
 		font-size 110px
@@ -748,12 +797,12 @@
 		pointer-events auto
 		margin-bottom 60px
 	.ill_about
-		left 80vw
+		transform translate(53vw, -30%)
 	.about-right
 		margin-left 0
 		
 	.why-block
-		max-width 310px
+		max-width 385px
 	.ill_why
 		display none
 	.serv-info p
@@ -771,7 +820,11 @@
 	.serv-row
 		align-items flex-start
 	.serv-pic
-		min-height 200px
+		height 175px
+		background-size 110% 120%
+		width 60%
+	.serv-info
+		width 40%
 	.special-left p
 		font-size 15px
 		line-height 25px
@@ -802,6 +855,35 @@
 		border: none
 	.contacts-info
 		margin-bottom 20px
+	.contacts-left h2
+		margin-bottom 20px
+	.contacts__item
+		margin-bottom 15px
+	.contacts-right h3
+		margin-bottom 20px
+	.section_portfolio
+		padding 100px 0
+	.portfolio__photos
+		height 360px
+	.section_about
+		padding 175px 0
+@media (max-width 991px) and (max-height 750px)
+	.ill_about
+		transform translate(53vw, -40%)
+	.why-block h4
+		font-size 20px
+		line-height 30px
+@media (max-width 991px) and (max-height 700px)
+	.ill_about
+		transform: translate(53vw, -55%)
+@media (max-width 850px)
+	.why-block
+		max-width: 340px
+		margin-bottom 20px
+	.why-block p
+		font-size 13px
+
+	
 @media (max-width 800px)
 	.main-right
 		max-width: 185px
@@ -872,6 +954,9 @@
 		line-height 25px
 	.mobile-start
 		display block
+	.body_cz
+		.mobile-start
+			max-width:70%
 	.about-wrap
 		margin-bottom 60px
 	.section_why .inner h3
@@ -886,21 +971,23 @@
 			overflow visible
 		.slick-track
 			display: flex !important;
-		.slick-slide
+		.why-block
 			height: inherit !important;
+	.why-block p
+		font-size 15px
 	.why-block
 		max-width 100%
 		margin-bottom 0
 		padding 26px 20px 20px
 		box-shadow inset 0 0 0 2px #E5E5E5
 		transition $transition
-		&.slick-active
-			background-color $black
-			box-shadow inset 0 0 0 2px $black
-			h4
-				color $white
-			.why-icon span:before
-				color $white
+	.slick-current
+		background-color $black
+		box-shadow inset 0 0 0 2px $black
+		h4
+			color $white
+		.why-icon span:before
+			color $white
 	.why-icon
 		position static
 		transform none
@@ -1082,6 +1169,44 @@
 		margin-bottom 30px
 		position relative
 
+	.contacts-btn
+		&.hover
+			animation doWowBtn 1s ease-out 1
+			.inner, .contacts-btn-title
+				color $white
+			.inner,
+			.contacts-btn-title
+				transition-delay 0s
+			&:before
+				animation doWow 1s ease-out 1
+	.special-decor
+		&.hover
+			color $white
+			transition-delay 0s
+			animation doWowBtn 1s ease-out 1
+			&:after
+				animation doWow 1s ease-out 1
+
+	@keyframes doWow 
+		0% 
+			transform: translate(-50%, -50%) scale(0)
+			opacity 0
+		50% 
+			transform: translate(-50%, -50%) scale(1)
+			opacity 1
+		100% 
+			transform: translate(-50%, -50%) scale(0)
+			opacity 0
+	
+	@keyframes doWowBtn
+		0%
+			transform: scale(1)
+		50% 
+			transform: scale(1.2)
+		100% 
+			transform: scale(1)
+		
+	
 @media (max-width: 580px)
 	.ill-mobile_main
 		right -50px
@@ -1102,3 +1227,7 @@
 		min-height 100px
 	.portfolio-pic-mob
 		height 252px
+	
+	.body_cz
+		.mobile-start
+			max-width: 100%
