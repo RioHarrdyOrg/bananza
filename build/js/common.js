@@ -7115,19 +7115,19 @@
           y: "-100%",
           boxShadow: "none"
         });
-        gsapWithCSS.set(".ill_special .ill-el_1", {
-          x: 0,
-          y: 0,
-          rotate: 0
-        });
-        gsapWithCSS.set(".ill_special .ill-el_2", {
-          x: 0,
-          y: 0,
-          rotate: 0
-        });
 
         if ($("#pagepiling").length) {
-          // Pagepiling
+          gsapWithCSS.set(".ill_special .ill-el_1", {
+            x: 0,
+            y: 0,
+            rotate: 0
+          });
+          gsapWithCSS.set(".ill_special .ill-el_2", {
+            x: 0,
+            y: 0,
+            rotate: 0
+          }); // Pagepiling
+
           $("#pagepiling").pagepiling({
             menu: "#myMenu",
             direction: "horizontal",
@@ -7197,257 +7197,256 @@
             afterRender: function () {
               changeLine(".menu li.active");
             }
+          }); // Main section
+
+          const mainObj = {
+            defaults: {
+              duration: 0.3
+            }
+          };
+          const tlMain = gsapWithCSS.timeline({
+            paused: true
           });
-        } // Main section
+          tlMain.add(tlMain1(mainObj), "main").add(tlMain2(mainObj), "main").add(tlMain3(mainObj), "main").add(tlMain4(mainObj), "main").add(tlMain5(mainObj), "main").add(tlMainFinish(mainObj));
 
-
-        const mainObj = {
-          defaults: {
-            duration: 0.3
+          function tlMain1(obj) {
+            let tl = gsapWithCSS.timeline(obj);
+            tl.to(".ill_main .ill-el_1", {
+              x: "random(-30, 30)",
+              y: 25
+            }).to(".ill_main .ill-el_1", {
+              x: "random(-30, 30)",
+              y: 50
+            });
+            return tl;
           }
-        };
-        const tlMain = gsapWithCSS.timeline({
-          paused: true
-        });
-        tlMain.add(tlMain1(mainObj), "main").add(tlMain2(mainObj), "main").add(tlMain3(mainObj), "main").add(tlMain4(mainObj), "main").add(tlMain5(mainObj), "main").add(tlMainFinish(mainObj));
 
-        function tlMain1(obj) {
-          let tl = gsapWithCSS.timeline(obj);
-          tl.to(".ill_main .ill-el_1", {
-            x: "random(-30, 30)",
-            y: 25
-          }).to(".ill_main .ill-el_1", {
-            x: "random(-30, 30)",
-            y: 50
-          });
-          return tl;
-        }
-
-        function tlMain2(obj) {
-          let tl = gsapWithCSS.timeline(obj);
-          tl.to(".ill_main .ill-el_2", {
-            x: "random(-30, 30)",
-            y: 20
-          }).to(".ill_main .ill-el_2", {
-            x: "random(-30, 30)",
-            y: 40
-          });
-          return tl;
-        }
-
-        function tlMain3(obj) {
-          let tl = gsapWithCSS.timeline(obj);
-          tl.to(".ill_main .ill-el_3", {
-            x: "random(-30, 30)",
-            y: 15
-          }).to(".ill_main .ill-el_3", {
-            x: "random(-30, 30)",
-            y: 30
-          });
-          return tl;
-        }
-
-        function tlMain4(obj) {
-          let tl = gsapWithCSS.timeline(obj);
-          tl.to(".ill_main .ill-el_4", {
-            x: "random(-30, 30)",
-            y: 10
-          }).to(".ill_main .ill-el_4", {
-            x: "random(-30, 30)",
-            y: 20
-          });
-          return tl;
-        }
-
-        function tlMain5(obj) {
-          let tl = gsapWithCSS.timeline(obj);
-          tl.to(".ill_main .ill-el_5", {
-            x: "random(-30, 30)",
-            y: 5
-          }).to(".ill_main .ill-el_5", {
-            x: "random(-30, 30)",
-            y: 10
-          });
-          return tl;
-        }
-
-        function tlMainFinish(obj) {
-          let tl = gsapWithCSS.timeline(obj);
-          tl.to(".ill_main .ill-el", {
-            top: "65%",
-            left: "45%",
-            scale: 0,
-            opacity: 0,
-            ease: "sine.in"
-          }).to(".ill_main .ill-el_mouth-1", {
-            opacity: 0,
-            ease: "sine.out"
-          }).to(".ill_main .ill-el_mouth-2", {
-            opacity: 1,
-            ease: "sine.in"
-          }, "-=0.35");
-          return tl;
-        } // About US section
-
-
-        const tlAboutUs = gsapWithCSS.timeline({
-          scrollTrigger: {
-            scroller: ".section_about",
-            trigger: ".about-right",
-            start: "top 25%",
-            end: "bottom 75%",
-            scrub: 1.3
+          function tlMain2(obj) {
+            let tl = gsapWithCSS.timeline(obj);
+            tl.to(".ill_main .ill-el_2", {
+              x: "random(-30, 30)",
+              y: 20
+            }).to(".ill_main .ill-el_2", {
+              x: "random(-30, 30)",
+              y: 40
+            });
+            return tl;
           }
-        });
-        tlAboutUs.to(".ill_about .ill-el_2", {
-          y: "70%",
-          ease: "power1.out"
-        }, "about").to(".ill_about .ill-el_3", {
-          y: "215%",
-          ease: "power1.out"
-        }, "about").to(".ill_about .ill-el_4", {
-          y: "240%",
-          ease: "power1.out"
-        }, "about").to(".ill_about .ill-el_5", {
-          y: "190%",
-          ease: "power1.out"
-        }, "about"); // Why Us section
 
-        function tlWhyUs1(obj) {
-          let tl = gsapWithCSS.timeline(obj);
-          tl.to(".ill_why .ill-el_2", {
-            x: "-4%",
-            y: "20%",
-            maxWidth: "50%"
-          }).to(".ill_why .ill-el_2", {
-            x: "25%",
-            y: "100%"
-          }).to(".ill_why .ill-el_2", {
-            x: "-10%",
-            y: "200%"
-          }).to(".ill_why .ill-el_2", {
-            x: "10%",
-            y: "250%"
-          });
-          return tl;
-        }
-
-        function tlWhyUs2(obj) {
-          let tl = gsapWithCSS.timeline(obj);
-          tl.to(".ill_why .ill-el_3", {
-            x: "25%",
-            y: "4%",
-            maxWidth: "50%"
-          }).to(".ill_why .ill-el_3", {
-            x: "40%",
-            y: "50%"
-          }).to(".ill_why .ill-el_3", {
-            x: "-40%",
-            y: "127%"
-          }).to(".ill_why .ill-el_3", {
-            x: "68%",
-            y: "254%"
-          });
-          return tl;
-        }
-
-        const whyUsObj = {
-          defaults: {
-            duration: 0.3,
-            ease: "none"
+          function tlMain3(obj) {
+            let tl = gsapWithCSS.timeline(obj);
+            tl.to(".ill_main .ill-el_3", {
+              x: "random(-30, 30)",
+              y: 15
+            }).to(".ill_main .ill-el_3", {
+              x: "random(-30, 30)",
+              y: 30
+            });
+            return tl;
           }
-        };
-        const tlWhyUs = gsapWithCSS.timeline({
-          paused: true
-        });
-        tlWhyUs.add(tlWhyUs1(whyUsObj), "why").add(tlWhyUs2(whyUsObj), "why"); // Services section
 
-        gsapWithCSS.set(".serv-pic", {
-          backgroundPosition: "50% 0%"
-        });
-        const servicesTargets = gsapWithCSS.utils.toArray(".serv-pic");
-        servicesTargets.forEach((el, i) => {
-          gsapWithCSS.to(el, {
+          function tlMain4(obj) {
+            let tl = gsapWithCSS.timeline(obj);
+            tl.to(".ill_main .ill-el_4", {
+              x: "random(-30, 30)",
+              y: 10
+            }).to(".ill_main .ill-el_4", {
+              x: "random(-30, 30)",
+              y: 20
+            });
+            return tl;
+          }
+
+          function tlMain5(obj) {
+            let tl = gsapWithCSS.timeline(obj);
+            tl.to(".ill_main .ill-el_5", {
+              x: "random(-30, 30)",
+              y: 5
+            }).to(".ill_main .ill-el_5", {
+              x: "random(-30, 30)",
+              y: 10
+            });
+            return tl;
+          }
+
+          function tlMainFinish(obj) {
+            let tl = gsapWithCSS.timeline(obj);
+            tl.to(".ill_main .ill-el", {
+              top: "65%",
+              left: "45%",
+              scale: 0,
+              opacity: 0,
+              ease: "sine.in"
+            }).to(".ill_main .ill-el_mouth-1", {
+              opacity: 0,
+              ease: "sine.out"
+            }).to(".ill_main .ill-el_mouth-2", {
+              opacity: 1,
+              ease: "sine.in"
+            }, "-=0.35");
+            return tl;
+          } // About US section
+
+
+          const tlAboutUs = gsapWithCSS.timeline({
             scrollTrigger: {
-              trigger: el,
-              scroller: ".section_services",
-              start: "top 75%",
-              end: "bottom top",
-              scrub: i * 0.2
-            },
-            backgroundPosition: "50% 100%",
-            ease: "none"
+              scroller: ".section_about",
+              trigger: ".about-right",
+              start: "top 25%",
+              end: "bottom 75%",
+              scrub: 1.3
+            }
           });
-        }); // Special puck section
+          tlAboutUs.to(".ill_about .ill-el_2", {
+            y: "70%",
+            ease: "power1.out"
+          }, "about").to(".ill_about .ill-el_3", {
+            y: "215%",
+            ease: "power1.out"
+          }, "about").to(".ill_about .ill-el_4", {
+            y: "240%",
+            ease: "power1.out"
+          }, "about").to(".ill_about .ill-el_5", {
+            y: "190%",
+            ease: "power1.out"
+          }, "about"); // Why Us section
 
-        const tlSp = gsapWithCSS.timeline({
-          paused: true,
-          defaults: {
-            duration: 2,
-            ease: "sine"
+          function tlWhyUs1(obj) {
+            let tl = gsapWithCSS.timeline(obj);
+            tl.to(".ill_why .ill-el_2", {
+              x: "-4%",
+              y: "20%",
+              maxWidth: "50%"
+            }).to(".ill_why .ill-el_2", {
+              x: "25%",
+              y: "100%"
+            }).to(".ill_why .ill-el_2", {
+              x: "-10%",
+              y: "200%"
+            }).to(".ill_why .ill-el_2", {
+              x: "10%",
+              y: "250%"
+            });
+            return tl;
           }
-        });
-        tlSp.to(".ill_special .ill-el_1", {
-          y: "-100%"
-        }, "special").to(".ill_special .ill-el_2", {
-          y: "100%"
-        }, "special"); // Contacts section
 
-        function tlContacts1(obj) {
-          let tl = gsapWithCSS.timeline(obj);
-          tl.to(".ill_contacts .ill-el_1", {
-            x: "60%",
-            y: "70%"
-          }).to(".ill_contacts .ill-el_1", {
-            x: "20%",
-            y: "130%"
-          }).to(".ill_contacts .ill-el_1", {
-            x: "130%",
-            y: "180%"
-          });
-          return tl;
-        }
-
-        function tlContacts2(obj) {
-          let tl = gsapWithCSS.timeline(obj);
-          tl.to(".ill_contacts .ill-el_2", {
-            x: "10%",
-            y: "-30%"
-          }).to(".ill_contacts .ill-el_2", {
-            x: "-30%",
-            y: "10%"
-          }).to(".ill_contacts .ill-el_2", {
-            x: "-155%",
-            y: "-80%"
-          });
-          return tl;
-        }
-
-        function tlContacts3(obj) {
-          let tl = gsapWithCSS.timeline(obj);
-          tl.to(".ill_contacts .ill-el_3", {
-            x: "10%",
-            y: "-30%"
-          }).to(".ill_contacts .ill-el_3", {
-            x: "80%",
-            y: "-10%"
-          }).to(".ill_contacts .ill-el_3", {
-            x: "210%",
-            y: "-200%"
-          });
-          return tl;
-        }
-
-        const contactsObj = {
-          defaults: {
-            duration: 0.3,
-            ease: "none"
+          function tlWhyUs2(obj) {
+            let tl = gsapWithCSS.timeline(obj);
+            tl.to(".ill_why .ill-el_3", {
+              x: "25%",
+              y: "4%",
+              maxWidth: "50%"
+            }).to(".ill_why .ill-el_3", {
+              x: "40%",
+              y: "50%"
+            }).to(".ill_why .ill-el_3", {
+              x: "-40%",
+              y: "127%"
+            }).to(".ill_why .ill-el_3", {
+              x: "68%",
+              y: "254%"
+            });
+            return tl;
           }
-        };
-        const tlContacts = gsapWithCSS.timeline({
-          paused: true
-        });
-        tlContacts.add(tlContacts1(contactsObj), "contacts").add(tlContacts2(contactsObj), "contacts").add(tlContacts3(contactsObj), "contacts");
+
+          const whyUsObj = {
+            defaults: {
+              duration: 0.3,
+              ease: "none"
+            }
+          };
+          const tlWhyUs = gsapWithCSS.timeline({
+            paused: true
+          });
+          tlWhyUs.add(tlWhyUs1(whyUsObj), "why").add(tlWhyUs2(whyUsObj), "why"); // Services section
+
+          gsapWithCSS.set(".serv-pic", {
+            backgroundPosition: "50% 0%"
+          });
+          const servicesTargets = gsapWithCSS.utils.toArray(".serv-pic");
+          servicesTargets.forEach((el, i) => {
+            gsapWithCSS.to(el, {
+              scrollTrigger: {
+                trigger: el,
+                scroller: ".section_services",
+                start: "top 75%",
+                end: "bottom top",
+                scrub: i * 0.2
+              },
+              backgroundPosition: "50% 100%",
+              ease: "none"
+            });
+          }); // Special puck section
+
+          const tlSp = gsapWithCSS.timeline({
+            paused: true,
+            defaults: {
+              duration: 2,
+              ease: "sine"
+            }
+          });
+          tlSp.to(".ill_special .ill-el_1", {
+            y: "-100%"
+          }, "special").to(".ill_special .ill-el_2", {
+            y: "100%"
+          }, "special"); // Contacts section
+
+          function tlContacts1(obj) {
+            let tl = gsapWithCSS.timeline(obj);
+            tl.to(".ill_contacts .ill-el_1", {
+              x: "60%",
+              y: "70%"
+            }).to(".ill_contacts .ill-el_1", {
+              x: "20%",
+              y: "130%"
+            }).to(".ill_contacts .ill-el_1", {
+              x: "130%",
+              y: "180%"
+            });
+            return tl;
+          }
+
+          function tlContacts2(obj) {
+            let tl = gsapWithCSS.timeline(obj);
+            tl.to(".ill_contacts .ill-el_2", {
+              x: "10%",
+              y: "-30%"
+            }).to(".ill_contacts .ill-el_2", {
+              x: "-30%",
+              y: "10%"
+            }).to(".ill_contacts .ill-el_2", {
+              x: "-155%",
+              y: "-80%"
+            });
+            return tl;
+          }
+
+          function tlContacts3(obj) {
+            let tl = gsapWithCSS.timeline(obj);
+            tl.to(".ill_contacts .ill-el_3", {
+              x: "10%",
+              y: "-30%"
+            }).to(".ill_contacts .ill-el_3", {
+              x: "80%",
+              y: "-10%"
+            }).to(".ill_contacts .ill-el_3", {
+              x: "210%",
+              y: "-200%"
+            });
+            return tl;
+          }
+
+          const contactsObj = {
+            defaults: {
+              duration: 0.3,
+              ease: "none"
+            }
+          };
+          const tlContacts = gsapWithCSS.timeline({
+            paused: true
+          });
+          tlContacts.add(tlContacts1(contactsObj), "contacts").add(tlContacts2(contactsObj), "contacts").add(tlContacts3(contactsObj), "contacts");
+        }
       },
       // mobile
       "(max-width: 767px), (max-height: 599px)": function () {
@@ -7456,49 +7455,52 @@
           y: "100%",
           boxShadow: "none"
         });
-        gsapWithCSS.set(".ill_special .ill-el_1", {
-          x: 0,
-          y: 0,
-          rotate: 90
-        });
-        gsapWithCSS.set(".ill_special .ill-el_2", {
-          x: 0,
-          y: 0,
-          rotate: 75
-        });
 
-        if (document.querySelector(".pp-section")) {
-          $.fn.pagepiling.destroy("all");
+        if ($("#pagepiling").length) {
+          gsapWithCSS.set(".ill_special .ill-el_1", {
+            x: 0,
+            y: 0,
+            rotate: 90
+          });
+          gsapWithCSS.set(".ill_special .ill-el_2", {
+            x: 0,
+            y: 0,
+            rotate: 75
+          });
+
+          if (document.querySelector(".pp-section")) {
+            $.fn.pagepiling.destroy("all");
+          }
+
+          gsapWithCSS.to(".ill-mobile_start", {
+            scrollTrigger: {
+              trigger: ".ill-mobile_start",
+              start: "top 30%",
+              scrub: false
+            },
+            onComplete: function () {
+              let target = document.querySelector(".ill-mobile_start").querySelector(".contacts-btn");
+              target.classList.add("hover");
+              setTimeout(() => {
+                target.classList.remove("hover");
+              }, 1000);
+            }
+          });
+          gsapWithCSS.to(".special-decor", {
+            scrollTrigger: {
+              trigger: ".special-right",
+              start: "top 50%",
+              scrub: false
+            },
+            onComplete: function () {
+              let target = document.querySelector(".special-decor");
+              target.classList.add("hover");
+              setTimeout(() => {
+                target.classList.remove("hover");
+              }, 1000);
+            }
+          });
         }
-
-        gsapWithCSS.to(".ill-mobile_start", {
-          scrollTrigger: {
-            trigger: ".ill-mobile_start",
-            start: "top 30%",
-            scrub: false
-          },
-          onComplete: function () {
-            let target = document.querySelector(".ill-mobile_start").querySelector(".contacts-btn");
-            target.classList.add("hover");
-            setTimeout(() => {
-              target.classList.remove("hover");
-            }, 1000);
-          }
-        });
-        gsapWithCSS.to(".special-decor", {
-          scrollTrigger: {
-            trigger: ".special-right",
-            start: "top 50%",
-            scrub: false
-          },
-          onComplete: function () {
-            let target = document.querySelector(".special-decor");
-            target.classList.add("hover");
-            setTimeout(() => {
-              target.classList.remove("hover");
-            }, 1000);
-          }
-        });
       },
       all: function () {}
     });

@@ -249,7 +249,7 @@
 										>Moje telefonní číslo je</label
 									>
 									<div class="box-field__input">
-										<input type="text" class="form-control" id="phone" />
+										<input type="number" class="form-control" id="phone" />
 									</div>
 								</div>
 								<div class="box-field">
@@ -281,7 +281,13 @@
 								</div>
 								<div class="box-field">
 									<div class="box-field__input">
-										<button class="btn btn_button btn_accent" type="submit">
+										<button
+											class="btn btn_button btn_accent js-popup-next"
+											type="submit"
+											data-target="thanks"
+											disabled
+											type="submit"
+										>
 											Poslat
 										</button>
 									</div>
