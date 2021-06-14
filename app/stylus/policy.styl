@@ -1,0 +1,37 @@
+@import 'supports/_vars.styl';
+
+.section
+	&_policy
+		padding 80px 0
+
+.policy
+	&-title
+		text-align center
+		margin-bottom 20px
+	&-text
+		h4
+			padding 20px 0 10px
+		a
+			color $accent
+			text-decoration underline
+			&:hover
+				text-decoration none
+				color $text-color
+	&-list
+		padding 0
+		margin 0 0 15px 0
+		list-style-type decimal
+		list-style-position inside
+		&_letters
+			list-style-type lower-alpha
+
+
+@media (max-width: 767px), (max-height : 599px)
+	.section_policy
+		padding 50px 0
+@media (max-width: 767px)
+	.policy-text h4
+		font-size 20px
+		line-height 25px
+		letter-spacing -0.1px
+

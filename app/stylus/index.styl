@@ -257,9 +257,9 @@
 		transition-delay .5s
 		&:hover
 			color $white
-			transition-delay 0s
 			&:after
 				transform translate(-50%, -50%) scale(1)
+			&:before
 				mix-blend-mode multiply
 		&:after
 			content ''
@@ -269,7 +269,7 @@
 			width 100%
 			height 100%
 			transform translate(-50%, -50%) scale(0)
-			background-color $red
+			background-color $red2
 			transition transform 1s ease
 			border-radius 50%
 		&:before
@@ -477,16 +477,14 @@
 			top 50%
 			left 50%
 			transform translate(-50%, -50%) scale(0)
-			opacity 0
 			width 100%
 			height 100%
 			background-color $red2
 			border-radius 50%
-			transition all 1s ease-in
+			transition transform 1s ease
 		&:hover
 			&:before
 				transform translate(-50%, -50%) scale(1)
-				opacity 1
 			.inner
 				color $white
 			.contacts-btn-title
@@ -500,7 +498,6 @@
 			top 50%
 			left 50%
 			transform translate(-50%, -50%)
-			mix-blend-mode unset
 		.inner
 			position relative
 			z-index 1
@@ -688,6 +685,8 @@
 			padding 175px 0
 		.why-block
 			margin-bottom 15px
+			&:nth-child(3)
+				margin-top -50px
 
 @media (max-width : 1240px)
 	.portfolio__photos
@@ -704,6 +703,9 @@
 		transform translate(35vw, -40%)
 	.why-block
 		max-width: 380px
+	.body_cz
+		.why-block
+			max-width: 415px
 	.ill_contacts
 		left 35%
 		width 450px
@@ -720,6 +722,24 @@
 @media (max-width : 1100px)
 	.why-block
 		max-width: 360px
+	.body_cz
+		.why-block
+			max-width: 400px
+		.ill_why
+			display none
+
+@media (min-width 992px)
+	.body
+		&_cz
+			.serv-abs
+				left calc(100% - 140px)
+			.serv-row_reverse .serv-abs
+				left -440px
+			.serv-info h2
+				transform: translateX(-140px)
+			.serv-row_reverse .serv-info h2
+				transform translateX(0px)
+		
 @media (min-width 992px) and (max-height : 750px)
 	.ill_contacts
 		bottom 50px
@@ -736,7 +756,7 @@
 	.about-right p
 		font-size 25px
 		line-height 40px
-	.why-block h4
+	.why-block 7
 		margin-bottom 5px
 	.why-block
 		margin-bottom 20px
@@ -803,6 +823,8 @@
 		
 	.why-block
 		max-width 385px
+	.body_cz .why-block
+		max-width: 330px
 	.ill_why
 		display none
 	.serv-info p
@@ -814,7 +836,7 @@
 	.serv-abs
 		top 20px
 	.serv-row_reverse .serv-abs
-		left -261.44px
+		left -66.5%
 	.serv-info h2
 		margin-bottom 20px
 	.serv-row
@@ -929,8 +951,6 @@
 		display none
 	.section_portfolio:before, .section_portfolio:after, .section_services:before, .section_services:after, .section_about:before, .section_about:after
 		display none
-	.header
-		position absolute
 	.section_main
 		padding 130px 0 30px
 	.section_about, 
@@ -938,6 +958,10 @@
 		padding 30px 0 305px
 	.body_cz .why-block
 		margin-bottom 0
+	.body_cz .why-block:nth-child(3)
+		margin-top 0
+	.body_cz .why-block
+		max-width: 100%
 	.main-wrap
 		flex-direction column
 		align-items flex-start

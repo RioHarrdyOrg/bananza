@@ -54,6 +54,7 @@ const mainJs = (cb) => {
 		.src("app/js/*.js")
 		.pipe(rollup({ plugins: [babel(), resolve(), commonjs()] }, "umd"))
 		.pipe(plumber())
+		.pipe(uglify())
 		.pipe(gulp.dest("build/js/"))
 		.pipe(
 			browserSync.reload({
@@ -99,6 +100,11 @@ const mainCssDev = (cb) => {
 		)
 		.pipe(autoprefixer("last 2 versions"))
 		.pipe(sourcemaps.write())
+		.pipe(
+			cleanCSS({
+				level: { 2: { restructureRules: true } },
+			})
+		)
 		.pipe(gulp.dest("build/css/"))
 		.pipe(
 			browserSync.reload({
