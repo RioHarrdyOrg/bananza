@@ -310,6 +310,14 @@
 				-webkit-text-stroke-color unset
 		&:last-child
 			margin-bottom 0
+		&_mod
+			.portfolio-pic-mob
+				img
+					object-position center 80%
+		&_mod-top
+			.portfolio-pic-mob
+				img
+					object-position center 30%
 	&__link
 		display block
 		&-mobile
@@ -336,6 +344,15 @@
 		&.active
 			opacity 1
 			visibility visible
+		&[data-cont="4"]
+			.portfolio-pic img
+				object-position center 80%
+		&[data-cont="5"]
+			.portfolio-pic img
+				object-position center 57%
+		&[data-cont="6"]
+			.portfolio-pic img
+				object-position center 35%
 	&-pic
 		height 100%
 		img
@@ -344,6 +361,7 @@
 			max-width none
 			object-fit cover
 			object-position center
+
 	&__more
 		pointer-events auto
 		position absolute

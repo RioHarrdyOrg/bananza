@@ -596,12 +596,12 @@ document.addEventListener("DOMContentLoaded", function () {
 			el.addEventListener("click", closePopup);
 		});
 	}
-	const nextPopupBtns = document.querySelectorAll(".js-popup-next");
-	if (nextPopupBtns) {
-		nextPopupBtns.forEach((el) => {
-			el.addEventListener("click", nextPopup);
-		});
-	}
+	// const nextPopupBtns = document.querySelectorAll(".js-popup-next");
+	// if (nextPopupBtns) {
+	// 	nextPopupBtns.forEach((el) => {
+	// 		el.addEventListener("click", nextPopup);
+	// 	});
+	// }
 	function showPopup(e) {
 		e.preventDefault();
 		const target = this.dataset.target;
@@ -611,21 +611,30 @@ document.addEventListener("DOMContentLoaded", function () {
 			ease: "power2.out",
 		});
 	}
-	function nextPopup(e) {
-		e.preventDefault();
-		let form = this.closest("form"),
-			inputs = form.querySelectorAll(".form-control"),
-			error = validation(form);
+	function nextPopup(form) {
+		let inputs = form.querySelectorAll(".form-control"),
+			error = validation(form),
+			form_data = $(form).serialize();
+
 		if (!error.length) {
 			inputs.forEach((input) => {
 				input.closest(".box-field__input").classList.remove("error");
 				input.value = "";
 			});
-			const target = this.dataset.target;
+			const target = form.querySelector(".js-popup-next").dataset.target;
 			body.classList.add("show");
 			gsap.to(document.querySelector("[data-cont=" + target + "]"), {
 				x: 0,
 				ease: "power2.out",
+			});
+			$.ajax({
+				type: "POST", // Метод отправки
+				url: "../send.php", // Путь до php файла отправителя
+				data: form_data,
+				success: function () {
+					// Код в этом блоке выполняется при успешной отправке сообщения
+					console.log("message send");
+				},
 			});
 		} else {
 			inputs.forEach((input) => {
@@ -715,8 +724,9 @@ document.addEventListener("DOMContentLoaded", function () {
 			gsap.to(label, { opacity: 1, ease: "power4.in" });
 		}
 	}
-	// Test
-	document.querySelector(".recall").addEventListener("click", (e) => {
+
+	$(".form form").on("submit", function (e) {
 		e.preventDefault();
+		nextPopup(this);
 	});
 });
