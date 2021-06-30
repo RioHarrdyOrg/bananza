@@ -2,9 +2,9 @@
 <html lang="cz">
 	<head>
 		<meta charset="utf-8" />
-		<title>Site name</title>
-		<meta name="description" content="Site slogan" />
-		<meta name="keywords" content="Site keys" />
+		<title>bananza.cz</title>
+		<meta name="description" content="Marketing Agency" />
+		<meta name="keywords" content="Bananza.cz" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta
 			name="viewport"
@@ -14,8 +14,8 @@
 		<meta name="msapplication-navbutton-color" content="#fff" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="#fff" />
 		<meta name="theme-color" content="#fff" />
-		<meta property="og:title" content="Site keys" />
-		<meta property="og:description" content="Site slogan" />
+		<meta property="og:title" content="Bananza.cz" />
+		<meta property="og:description" content="Marketing Agency" />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="***permalink***" />
 		<meta property="og:image" content="***img***" />
@@ -174,7 +174,7 @@
 								<img src="img/contacts/ill-4.png" alt="contacts" />
 							</div>
 							<div class="ill-el ill-el_5">
-								<a href="#" class="contacts-btn js-popup-start" data-target="start">
+								<a href="#" class="contacts-btn js-popup-free" data-target="start">
 									<img src="img/main/main-svg-2.png" alt="svg" />
 									<div class="inner">
 										<div class="contacts-btn-title">start</div>
@@ -474,7 +474,7 @@
 						</div>
 						<div class="special-right">
 							<h3>Sociální distance, která nám chyběla.</h3>
-							<a href="#" class="special-decor js-popup-start" data-target="start"
+							<a href="#" class="special-decor js-popup-order" data-target="start"
 								><span>Objednat</span></a
 							>
 						</div>
@@ -489,31 +489,57 @@
 					</div>
 					<div class="form form_call">
 						<form>
-							<input type="hidden" name="callBack" />
+							<input type="hidden" name="callBack" value="callBack" />
 							<div class="box-field">
-								<label for="name" class="box-field__label">Ahoj, jmenuji se</label>
+								<label for="contactName" class="box-field__label"
+									>Ahoj, jmenuji se</label
+								>
 								<div class="box-field__input">
-									<input type="text" class="form-control" id="name" />
+									<input
+										type="text"
+										class="form-control"
+										name="contactName"
+										id="contactName"
+									/>
 								</div>
 							</div>
 							<div class="box-field">
-								<label for="phone" class="box-field__label ghost"
+								<label for="contactPhone" class="box-field__label ghost"
 									>Moje telefonní číslo je</label
 								>
 								<div class="box-field__input">
-									<input type="number" class="form-control" id="phone" />
+									<input
+										type="number"
+										class="form-control"
+										name="contactPhone"
+										id="contactPhone"
+									/>
 								</div>
 							</div>
 							<div class="box-field">
-								<label for="email" class="box-field__label">A můj Email je</label>
+								<label for="contactEmail" class="box-field__label"
+									>A můj Email je</label
+								>
 								<div class="box-field__input">
-									<input type="email" class="form-control" id="email" />
+									<input
+										type="email"
+										class="form-control"
+										name="contactEmail"
+										id="contactEmail"
+									/>
 								</div>
 							</div>
 							<div class="box-field">
-								<label for="want" class="box-field__label ghost">Potřebuju</label>
+								<label for="contactWant" class="box-field__label ghost"
+									>Potřebuju</label
+								>
 								<div class="box-field__input">
-									<textarea class="form-control" id="want" rows="1"></textarea>
+									<textarea
+										class="form-control"
+										name="contactWant"
+										id="contactWant"
+										rows="1"
+									></textarea>
 								</div>
 							</div>
 							<div class="box-field">
@@ -851,7 +877,7 @@
 							<img src="img/contacts/ill-4.png" alt="contacts" />
 						</div>
 						<div class="ill-el ill-el_5">
-							<a href="#" class="contacts-btn js-popup-start" data-target="start">
+							<a href="#" class="contacts-btn js-popup-free" data-target="start">
 								<img src="img/main/main-svg-2.png" alt="svg" />
 								<div class="inner">
 									<div class="contacts-btn-title">start</div>
@@ -906,7 +932,7 @@
 									Všechna práva vyhrazena.
 								</div>
 							</div>
-							<a href="#" class="contacts-btn js-popup-start" data-target="start">
+							<a href="#" class="contacts-btn js-popup-free" data-target="start">
 								<div class="inner">
 									<div class="contacts-btn-title">start</div>
 								</div>
@@ -935,7 +961,7 @@
 								</li>
 							</ul>
 						</div>
-						<a href="#" class="recall js-popup-start" data-target="start">
+						<a href="#" class="recall js-popup-free" data-target="start">
 							<span class="icon-call"></span>
 							<span>Zavolejte mi</span>
 						</a>
@@ -1010,28 +1036,42 @@
 				</div>
 				<div class="form form_start">
 					<form>
-						<input type="hidden" name="popup" value="popup" />
+						<input type="hidden" name="free" value="free" class="input-hidden" />
 						<div class="box-field">
-							<label for="" class="box-field__label">Jmenuji se</label>
+							<label for="popupName" class="box-field__label">Jmenuji se</label>
 							<div class="box-field__input">
-								<input type="text" class="form-control" placeholder="John" />
+								<input
+									type="text"
+									name="name"
+									id="popupName"
+									class="form-control"
+									placeholder="John"
+								/>
 							</div>
 						</div>
 						<div class="box-field">
-							<label for="" class="box-field__label">Mám zájem o</label>
+							<label for="popupInterested" class="box-field__label"
+								>Mám zájem o</label
+							>
 							<div class="box-field__input">
 								<input
 									type="text"
 									class="form-control"
+									name="interested"
+									id="popupInterested"
 									placeholder="Design, SMM …"
 								/>
 							</div>
 						</div>
 						<div class="box-field">
-							<label for="" class="box-field__label">Moje telefonní číslo</label>
+							<label for="popupPhone" class="box-field__label"
+								>Moje telefonní číslo</label
+							>
 							<div class="box-field__input">
 								<input
 									type="number"
+									name="phone"
+									id="popupPhone"
 									class="form-control"
 									placeholder="+420 000 000 000"
 								/>
@@ -1048,7 +1088,7 @@
 						<div class="box-field">
 							<div class="box-field__input">
 								<button
-									class="btn btn_button btn_white js-popup-next"
+									class="btn btn_button btn_white"
 									type="submit"
 									data-target="thanks"
 								>

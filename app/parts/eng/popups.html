@@ -20,28 +20,42 @@
 		</div>
 		<div class="form form_start">
 			<form>
-				<input type="hidden" name="popup" value="popup" />
+				<input type="hidden" name="free" value="free" class="input-hidden" />
 				<div class="box-field">
-					<label for="" class="box-field__label">My name is</label>
-					<div class="box-field__input">
-						<input type="text" class="form-control" placeholder="John" />
-					</div>
-				</div>
-				<div class="box-field">
-					<label for="" class="box-field__label">I'm interested in</label>
+					<label for="popupName" class="box-field__label">My name is</label>
 					<div class="box-field__input">
 						<input
 							type="text"
 							class="form-control"
+							name="name"
+							id="popupName"
+							placeholder="John"
+						/>
+					</div>
+				</div>
+				<div class="box-field">
+					<label for="popupInterested" class="box-field__label"
+						>I'm interested in</label
+					>
+					<div class="box-field__input">
+						<input
+							type="text"
+							class="form-control"
+							name="interested"
+							id="popupInterested"
 							placeholder="Design, SMM …"
 						/>
 					</div>
 				</div>
 				<div class="box-field">
-					<label for="" class="box-field__label">My phone number</label>
+					<label for="popupPhone" class="box-field__label"
+						>My phone number</label
+					>
 					<div class="box-field__input">
 						<input
 							type="number"
+							name="phone"
+							id="popupPhone"
 							class="form-control"
 							placeholder="+420 000 000 000"
 						/>
@@ -58,7 +72,7 @@
 				<div class="box-field">
 					<div class="box-field__input">
 						<button
-							class="btn btn_button btn_white js-popup-next"
+							class="btn btn_button btn_white"
 							type="submit"
 							data-target="thanks"
 						>

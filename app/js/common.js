@@ -596,15 +596,24 @@ document.addEventListener("DOMContentLoaded", function () {
 			el.addEventListener("click", closePopup);
 		});
 	}
-	// const nextPopupBtns = document.querySelectorAll(".js-popup-next");
-	// if (nextPopupBtns) {
-	// 	nextPopupBtns.forEach((el) => {
-	// 		el.addEventListener("click", nextPopup);
-	// 	});
-	// }
-	function showPopup(e) {
-		e.preventDefault();
-		const target = this.dataset.target;
+	const orderBtns = document.querySelectorAll(".js-popup-order");
+	orderBtns.forEach((el) => {
+		el.addEventListener("click", function (e) {
+			e.preventDefault();
+			document.querySelector(".input-hidden").setAttribute("name", "order");
+			showPopup(this);
+		});
+	});
+	const freeBtns = document.querySelectorAll(".js-popup-free");
+	freeBtns.forEach((el) => {
+		el.addEventListener("click", function (e) {
+			e.preventDefault();
+			document.querySelector(".input-hidden").setAttribute("name", "free");
+			showPopup(this);
+		});
+	});
+	function showPopup(el) {
+		const target = el.dataset.target;
 		body.classList.add("show");
 		gsap.to(document.querySelector("[data-cont=" + target + "]"), {
 			x: 0,
@@ -612,6 +621,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	}
 	function nextPopup(form) {
+		console.log(form);
 		let inputs = form.querySelectorAll(".form-control"),
 			error = validation(form),
 			form_data = $(form).serialize();

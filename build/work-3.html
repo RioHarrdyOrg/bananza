@@ -2,9 +2,9 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>Site name</title>
-		<meta name="description" content="Site slogan" />
-		<meta name="keywords" content="Site keys" />
+		<title>bananza.cz</title>
+		<meta name="description" content="Marketing Agency" />
+		<meta name="keywords" content="Bananza.cz" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta
 			name="viewport"
@@ -14,8 +14,8 @@
 		<meta name="msapplication-navbutton-color" content="#fff" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="#fff" />
 		<meta name="theme-color" content="#fff" />
-		<meta property="og:title" content="Site keys" />
-		<meta property="og:description" content="Site slogan" />
+		<meta property="og:title" content="Bananza.cz" />
+		<meta property="og:description" content="Marketing Agency" />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="***permalink***" />
 		<meta property="og:image" content="***img***" />
@@ -255,7 +255,7 @@
 									</li>
 								</ul>
 							</div>
-							<a href="#" class="recall js-popup-start" data-target="start">
+							<a href="#" class="recall js-popup-free" data-target="start">
 								<span class="icon-call"></span>
 								<span>Call me back</span>
 							</a>
@@ -331,28 +331,42 @@
 					</div>
 					<div class="form form_start">
 						<form>
-							<input type="hidden" name="popup" value="popup" />
+							<input type="hidden" name="free" value="free" class="input-hidden" />
 							<div class="box-field">
-								<label for="" class="box-field__label">My name is</label>
-								<div class="box-field__input">
-									<input type="text" class="form-control" placeholder="John" />
-								</div>
-							</div>
-							<div class="box-field">
-								<label for="" class="box-field__label">I'm interested in</label>
+								<label for="popupName" class="box-field__label">My name is</label>
 								<div class="box-field__input">
 									<input
 										type="text"
 										class="form-control"
+										name="name"
+										id="popupName"
+										placeholder="John"
+									/>
+								</div>
+							</div>
+							<div class="box-field">
+								<label for="popupInterested" class="box-field__label"
+									>I'm interested in</label
+								>
+								<div class="box-field__input">
+									<input
+										type="text"
+										class="form-control"
+										name="interested"
+										id="popupInterested"
 										placeholder="Design, SMM …"
 									/>
 								</div>
 							</div>
 							<div class="box-field">
-								<label for="" class="box-field__label">My phone number</label>
+								<label for="popupPhone" class="box-field__label"
+									>My phone number</label
+								>
 								<div class="box-field__input">
 									<input
 										type="number"
+										name="phone"
+										id="popupPhone"
 										class="form-control"
 										placeholder="+420 000 000 000"
 									/>
@@ -369,7 +383,7 @@
 							<div class="box-field">
 								<div class="box-field__input">
 									<button
-										class="btn btn_button btn_white js-popup-next"
+										class="btn btn_button btn_white"
 										type="submit"
 										data-target="thanks"
 									>
